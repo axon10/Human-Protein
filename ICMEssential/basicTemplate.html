@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> MolSoft Online Database Sheet </title>
+	<meta name="generator" content="BBEdit 12.6" />
+	<style type="text/css">		
+	table{
+  border-collapse:collapse;
+  font-family: arial;
+  font-size:14px;
+  width: 50%;
+margin: 20px auto;
+table-layout: auto;
+float: left;
+display: inline;
+}
+th {
+  background-color: #AAA;
+  color: white;
+  border:1px solid gray;
+  padding: 5px;
+}
+td {
+  border:1px solid gray;
+  padding: 5px;
+}
+tr:nth-child(even) {background: #EEE}
+tr:nth-child(odd) {background: #FFF}
+body {
+	text-align: center;
+}
+	</style>
+<div id="con" style="
+	position: fixed;
+	float: right;
+    width: 400px;
+    height: 350px;
+    margin-right: 100px;
+}
+	">
+</div>
+
+<!--ICM links-->
+	<script src="http://molsoft.com/lib/acticm.js">
+	</script>
+</head>
+<body>
+<h1>
+	Welcome to MolSoft Online! 
+</h1>
+
+
+<script>
+	function onLoadActiveIcm()
+	{
+	act = new ActiveIcmJS("con");
+
+	act.projectFile = "3ny9jsz.pdb"
+	}
+	function getStr(pdbid,ligName) {	
+		           		
+		         	act.projectFile = "../SouperTest/" + pdbid + ligName + ".icb"; // or pdb, mol
+		         	act.OpenProject("../SouperTest/ICMfiles/" + pdbid + ligName + ".icb")
+		         	 //If you don't want the link to actually 
+	            // redirect the browser to another page,
+	            // "google.com" in our example here, then
+	            // return false at the end of this block.
+	            // Note that this also prevents event bubbling,
+	            // which is probably what we want here, but won't 
+	            // always be the case.
+		         	return false;
+		         	}
+</script>
+
+</body>
+</html>
+</head>
+<body>
+</body>
+</html>
