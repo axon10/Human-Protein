@@ -1,0 +1,51 @@
+#uniq_protein_with_lig_in_pdb (rename ?proteins with bound ligand in the PDB?)
+#-gene name: DOT1L
+#-protein: Histone-lysine N-methyltransferase, H3 lysine-79 specific
+#-uniprot ID: Q8TEK3
+#-synonyms: KIAA1814, KMT4
+#-PDB codes: 4ER3, 4ER6,?
+
+ip_distribution = ip_distribution_0718
+all_ip_with_pdb = all_ip_with_pdb_0717
+
+for i = 1,1
+print i 
+  
+  t6 = ip_distribution.Domain_ID[1] == all_ip_with_pdb.ip_code
+
+  group t6.up_code t6.up_code 'count,count' name='temp4'
+#  delete t6
+  delete temp4.count
+  add column temp4 Count(1 Nof(temp4)) index=1 name="index" append 
+  add column temp4 Sarray(Nof(temp4),"") index=2 name="Gene Name Primary" append 
+  add column temp4 Sarray(Nof(temp4),"") index=4 name="Protein Name" append  
+  add column temp4 Sarray(Nof(temp4),"") index=5 name="Gene Name Synonym" append 
+  add column temp4 Sarray(Nof(temp4),"") index=6 name="PDB codes" append 
+  rename temp4.up_code "Uniprot_ID"
+
+for j = 1, Nof(temp4)
+
+    t2 = temp4.Uniprot_ID[j] ==uniprot_full_info.Entry
+
+    if Nof(t2)!=0 then
+      temp4.Gene_Name_Primary[j] = t2.Gene_names_primary_[1]
+      temp4.Protein_Name[j]=t2.Protein_names[1]
+      temp4.Gene_Name_Synonym[j]=t2.Gene_names_synonym_[1]
+    endif
+
+    t4 = temp4.Uniprot_ID[j] == t6.up_code
+    aa = ""
+    for k = 1, Nof(t4)
+      aa += " " + t4.pdb_code[k]
+    endfor
+    temp4.PDB_codes[j] = aa
+
+  endfor
+
+  f_name = "col_4_"+ip_distribution.Domain_ID[i]
+  write html temp4 f_name format = yes header = yes frame = 1 chemical = yes sort view size = 200 // 150
+  rename temp4 f_name
+endfor
+
+delete t2, t4, t6
+delete ip_distribution, all_ip_with_pdb

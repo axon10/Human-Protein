@@ -3,7 +3,7 @@ ip_distribution = ip_distribution_0718
 
 for i = 1,1
 
-  t1 = all_human_ip.ip_code ==ip_distribution.ip_code[i]
+  t1 = all_human_ip.ip_code ==ip_distribution.Domain_ID[i]
 
   group t1.uniprot t1.uniprot 'count,count' name='temp'
   delete t1
@@ -25,7 +25,7 @@ for i = 1,1
     endif
 
   endfor
-  f_name = "col_1_"+ip_distribution.ip_code[i]
+  f_name = "col_1_"+ip_distribution.Domain_ID[i]
   write html temp f_name format = yes header = yes frame = 1 chemical = yes sort view size = 200 // 150
   rename temp f_name
 

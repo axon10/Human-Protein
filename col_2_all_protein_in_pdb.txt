@@ -1,7 +1,7 @@
 ip_distribution = ip_distribution_0718
 for i = 1,1
 
-  t3 = ip_distribution.ip_code[i] ==protein_in_pdb_reference.INTERPRO_ID
+  t3 = ip_distribution.Domain_ID[i] ==protein_in_pdb_reference.INTERPRO_ID
   group t3.upid t3.upid 'count,count' name='temp2'
 #  delete t3
   delete temp2.count
@@ -31,7 +31,7 @@ for i = 1,1
 
   endfor
   
-  f_name = "col_2_"+ip_distribution.ip_code[i]
+  f_name = "col_2_"+ip_distribution.Domain_ID[i]
   write html temp2 f_name format = yes header = yes frame = 1 chemical = yes sort view size = 200 // 150
   rename temp2 f_name
   
