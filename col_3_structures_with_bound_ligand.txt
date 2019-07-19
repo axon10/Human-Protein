@@ -1,0 +1,52 @@
+ip_distribution = ip_distribution_0718
+all_ip_with_pdb = all_ip_with_pdb_0717
+
+for i = 1,1
+print i 
+  temp3 = all_ip_with_pdb.ip_code ==ip_distribution.ip_code[i]
+  delete temp3.ip_code
+  delete temp3.protein_chain
+  delete temp3.MI
+  delete temp3.MX
+  delete temp3.index_change_flag
+  delete temp3.new_binding
+
+
+#  t1 = temp3.up_code[1] ==  uniprot_full_info.Entry
+
+#  group t1.uniprot t1.uniprot 'count,count' name='temp3'
+#  delete t1
+#  delete temp3.count
+  add column temp3 Count(1 Nof(temp3)) index=1 name="index" append 
+  add column temp3 Sarray(Nof(temp3),"") index=3 name="Protein Name" append  
+  add column temp3 Sarray(Nof(temp3),"") index=5 name="Gene Name Synonym" append 
+  add column temp3 Image(Nof(temp3)) index=7 name="Structure" append  
+  add column temp3 Chemical( Sarray( Nof(temp3),"" )) index=9 name="Ligand_Structure" append 
+  
+  rename temp3.up_code "Uniprot_ID"
+
+  for j = 1, Nof(temp3)
+
+    t2 = temp3.Uniprot_ID[j] ==uniprot_full_info.Entry
+    t3 = temp3.lig_name[j] == Components_pub_all_.NAME_
+
+    if Nof(t2)!=0 then
+
+      temp3.Protein_Name[j]=t2.Protein_names[1]
+      temp3.Gene_Name_Synonym[j]=t2.Gene_names_synonym_[1]
+    endif
+    temp3.Ligand_Structure[j] =t3.mol[1]
+    
+
+  endfor
+
+  rename temp3.up_name "Gene_Name_Primary"
+
+  f_name = "col_3_"+ip_distribution.ip_code[i]
+  write html temp3 f_name format = yes header = yes frame = 1 chemical = yes sort view size = 200 // 150
+  rename temp3 f_name
+
+
+
+endfor
+delete ip_distribution,all_ip_with_pdb, t2, t3

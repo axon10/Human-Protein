@@ -1,0 +1,30 @@
+s_projectsDir = "/Users/anahan/Documents/tables/" 
+ip_distribution = ip_distribution_0718
+for i = 1,1
+  table_id = ip_distribution.ip_code[i]
+  t_tmp= all_ip_with_pdb.ip_code ==ip_distribution.ip_code[i] 
+  add column t_tmp Chemical( Sarray( Nof(t_tmp),"" )) index=1 name="mol" append
+  for j = 1,Nof(t_tmp)
+    tt = Components_pub_all_.NAME_ == t_tmp.lig_name[j]
+    t_tmp.mol[j]=tt.mol[1]
+    delete tt
+    delete gui Obj( a_.* )
+    s_pdb=t_tmp.pdb_code[j]
+    s_lig=t_tmp.lig_name[j]
+    s_chain=t_tmp.protein_chain[j]
+    read pdb s_pdb
+    s_lig="*"+s_lig
+    lig=(a_/$s_lig)[1]
+    ds xstick lig
+    dsPocketRec lig a_$s_chain 6. "" yes no yes
+    ds Res(Sphere(lig a_$s_chain 5.)) xstick
+    color a_//c* & lig cyan
+    color a_$s_chain//c* orange
+    s_name = "g_" + s_pdb +"_" +s_chain
+    center static 
+    s_lig = t_tmp.lig_name[j]
+    ## name and save the 3D view
+    write pdb a_$s_pdb. "/Users/anahan/Documents/pdb/" + s_pdb + "_" + s_lig + ".pdb"
+  endfor
+  write html t_tmp table_id format = yes header = yes frame = 1 chemical = yes sort view size = 200 // 150 
+endfor

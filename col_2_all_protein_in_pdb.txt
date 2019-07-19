@@ -1,0 +1,41 @@
+ip_distribution = ip_distribution_0718
+for i = 1,1
+
+  t3 = ip_distribution.ip_code[i] ==protein_in_pdb_reference.INTERPRO_ID
+  group t3.upid t3.upid 'count,count' name='temp2'
+#  delete t3
+  delete temp2.count
+  add column temp2 Count(1 Nof(temp2)) index=1 name="index" append 
+  add column temp2 Sarray(Nof(temp2),"") index=2 name="Gene Name Primary" append 
+  add column temp2 Sarray(Nof(temp2),"") index=4 name="Protein Name" append  
+  add column temp2 Sarray(Nof(temp2),"") index=5 name="Gene Name Synonym" append 
+  add column temp2 Sarray(Nof(temp2),"") index=6 name="PDB codes" append 
+  rename temp2.upid "Uniprot_ID"
+
+  for j = 1, Nof(temp2)
+
+    t2 = temp2.Uniprot_ID[j] ==uniprot_full_info.Entry
+
+    if Nof(t2)!=0 then
+      temp2.Gene_Name_Primary[j] = t2.Gene_names_primary_[1]
+      temp2.Protein_Name[j]=t2.Protein_names[1]
+      temp2.Gene_Name_Synonym[j]=t2.Gene_names_synonym_[1]
+    endif
+
+    t4 = temp2.Uniprot_ID[j] == t3.upid
+    aa = ""
+    for k = 1, Nof(t4)
+      aa += " " + t4.PDB[k]
+    endfor
+    temp2.PDB_codes[j] = aa
+
+  endfor
+  
+  f_name = "col_2_"+ip_distribution.ip_code[i]
+  write html temp2 f_name format = yes header = yes frame = 1 chemical = yes sort view size = 200 // 150
+  rename temp2 f_name
+  
+  
+endfor
+delete t2,t3,t4
+
