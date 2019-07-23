@@ -4,15 +4,24 @@
 	<title> MolSoft Online Database Sheet </title>
 	<meta name="generator" content="BBEdit 12.6" />
 	<style type="text/css">		
-	table{
-  border-collapse:collapse;
-  font-family: arial;
-  font-size:14px;
-  width: 50%;
-margin: 20px auto;
-table-layout: auto;
-float: left;
-display: inline;
+table{
+  	border-collapse:collapse;
+  	font-family: arial;
+  	font-size:14px;
+  	width: 50%;
+	margin: 20px auto;
+	table-layout: auto;
+	float: left;
+	display: inline;
+}
+
+thead th {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 999;
+    background-color: #000;
+    color: #fff;
 }
 th {
   background-color: #AAA;
@@ -20,12 +29,12 @@ th {
   border:1px solid gray;
   padding: 5px;
 }
-td {
+#table-icm td {
   border:1px solid gray;
   padding: 5px;
 }
-tr:nth-child(even) {background: #EEE}
-tr:nth-child(odd) {background: #FFF}
+#table-icm tr:nth-child(even) {background: #EEE}
+#table-icm tr:nth-child(odd) {background: #FFF}
 body {
 	text-align: center;
 }
@@ -59,8 +68,8 @@ body {
 	}
 	function getStr(pdbid,ligName) {	
 		           		
-		         	act.projectFile = "../SouperTest/" + pdbid + ligName + ".icb"; // or pdb, mol
-		         	act.OpenProject("../SouperTest/ICMfiles/" + pdbid + ligName + ".icb")
+		         	act.projectFile = "../pdb/" + pdbid + "_" + ligName + ".pdb"; // or pdb, mol
+		         	act.OpenProject("../pdb/" + pdbid + "_" + ligName + ".pdb")
 		         	 //If you don't want the link to actually 
 	            // redirect the browser to another page,
 	            // "google.com" in our example here, then
