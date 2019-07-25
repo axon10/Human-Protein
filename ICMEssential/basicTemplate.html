@@ -1,89 +1,57 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title> MolSoft Online Database Sheet </title>
-	<meta name="generator" content="BBEdit 12.6" />
-	<style type="text/css">		
-table{
-  	border-collapse:collapse;
-  	font-family: arial;
-  	font-size:14px;
-  	width: 50%;
-	margin: 20px auto;
-	table-layout: auto;
-	float: left;
-	display: inline;
-}
+	<head>
+		<title> Human Protein Database</title>
+		<!--pocket viewer script, must put before style since it gets overwritten-->
+		<script src="http://molsoft.com/lib/acticm.js"></script>
+		<style type="text/css">
+			#table-icm {
+				width: 50%;
+			    border-collapse:collapse;
+			    font-family: arial;
+			    font-size:14px;
+				float: left;
+			    table-layout: fixed;
+			    display: inline;  
+				overflow: scroll;
+			}
+			#table-icm th {
+			    background-color: #AAA;
+			    color: white;
+			    border:1px solid gray;
+			    padding: 5px;
+			    position: sticky;
+				position: -webkit-sticky;
+				top: 0;
+				z-index: 999;
+			}
+			#table-icm td {
+				border:1px solid gray;
+				padding: 5px;
+				word-wrap:break-word
+			}
+			#table-icm tr:nth-child(even) {background: #EEE}
+			#table-icm tr:nth-child(odd) {background: #FFF}
+		</style>
+	</head>
+	<body>
+		<h1>Human Protein Database</h1>
+		<div id="con" style="width: 45%; height: 700px; position: relative; float: right;  position: sticky;" > </div>
+		<!--tables are index 2, place them here--->
+		
+		<!--scripts are index 3, place them here-->
+		<script>
+			function onLoadActiveIcm()
+			{
+			act = new ActiveIcmJS("con");
 
-thead th {
-    position: sticky;
-    position: -webkit-sticky;
-    top: 0;
-    z-index: 999;
-    background-color: #000;
-    color: #fff;
-}
-th {
-  background-color: #AAA;
-  color: white;
-  border:1px solid gray;
-  padding: 5px;
-}
-#table-icm td {
-  border:1px solid gray;
-  padding: 5px;
-}
-#table-icm tr:nth-child(even) {background: #EEE}
-#table-icm tr:nth-child(odd) {background: #FFF}
-body {
-	text-align: center;
-}
-	</style>
-<div id="con" style="
-	position: fixed;
-	float: right;
-    width: 400px;
-    height: 350px;
-    margin-right: 100px;
-}
-	">
-</div>
-
-<!--ICM links-->
-	<script src="http://molsoft.com/lib/acticm.js">
-	</script>
-</head>
-<body>
-<h1>
-	Welcome to MolSoft Online! 
-</h1>
-
-
-<script>
-	function onLoadActiveIcm()
-	{
-	act = new ActiveIcmJS("con");
-
-	act.projectFile = "3ny9jsz.pdb"
-	}
-	function getStr(pdbid,ligName) {	
-		           		
-		         	act.projectFile = "../pdb/" + pdbid + "_" + ligName + ".pdb"; // or pdb, mol
-		         	act.OpenProject("../pdb/" + pdbid + "_" + ligName + ".pdb")
-		         	 //If you don't want the link to actually 
-	            // redirect the browser to another page,
-	            // "google.com" in our example here, then
-	            // return false at the end of this block.
-	            // Note that this also prevents event bubbling,
-	            // which is probably what we want here, but won't 
-	            // always be the case.
-		         	return false;
-		         	}
-</script>
-
-</body>
-</html>
-</head>
-<body>
-</body>
+			act.projectFile = "../pdb/3ny9_jsz.pdb"
+			}
+			function getStr(pdbid,ligName) {	
+				act.projectFile = "../pdb/" + pdbid + "_" + ligName + ".pdb"; // or pdb, mol
+				act.OpenProject("../pdb/" + pdbid + "_" + ligName + ".pdb")
+				return false;
+				}
+		</script>
+	</body>
 </html>
