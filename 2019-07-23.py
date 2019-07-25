@@ -49,85 +49,103 @@ def initIndex(index_file, template_with_script):
     from bs4 import BeautifulSoup
     ### open up the index, and find all of the items to link
     with open(index_file, 'r') as file:
-        soup = BeautifulSoup(file.read()).find_all('table')[0]
-    iterRows = iter(soup.find_all('tr'))
-    ### in each row, list the full table, pch, pcipdb, pdb_lig, protein, lig_count, etc.
-    for row in iterRows:
-        cells = row.find_all('td')
-        ### cells in row one/two should link to full IPR table.
-        domain_id = cells[1].get_text()
-        domain_name = cells[2].get_text()
-        full_table_link = BeautifulSoup('<a href="../tables/' + domain_id +'.html">' + domain_name + "</a>", 'lxml').a
-        cells[2].string = ""
-        cells[2].append(full_table_link)
-        
-        for index, cell in enumerate(cells):
-            if index >= 3 :
-                col = str(index+1)
+        soup = BeautifulSoup(file.read(), 'lxml')
+         ### in each row, list the full table, pch, pcipdb, pdb_lig, protein, lig_count, etc.
+        iterRows = iter(soup.find_all('tr'))
+        for row in iterRows:
+            cells = row.find_all('td')
+            ### cells in row one/two should link to full IPR table.
+            domain_id = cells[1].get_text()
+            domain_name = cells[2].get_text()
+            full_table_link = BeautifulSoup('<a href="../tables/' + domain_id +'.html">' + domain_name + "</a>", 'lxml').a
+            cells[2].string = ""
+            cells[2].append(full_table_link)
+            for index, cell in enumerate(cells):
+                if (index >= 3 and index <= 8):
+                    col = str(index-2)
+                if index >= 10:
+                    col = str(index-3)
                 link = BeautifulSoup('<a href="../tables/'+ "col_" + col + "_" + domain_id +'.html">' + cell.get_text() + "</a>", 'lxml').a
                 cell.string = ""
                 cell.append(link)
-    with open(template_with_script, 'r') as file:
-          final_full_table = BeautifulSoup(file.read(), 'lxml')
-          final_full_table.body.insert(1, soup)
-    print(str(final_full_table))
+        ## update new css
+        with open(template_with_script, 'r') as css_src:
+          style = BeautifulSoup(css_src.read(), 'lxml').find_all('style')[0]
+          old_style = soup.find_all('style')[0]
+          old_style.replace_with(style)
+    print(str(soup))
     with open(index_file,'w+', encoding="utf-8") as file:
-           file.write(str(final_full_table))
+           file.write(str(soup))
            file.close()
  
-
 ####Given the full IPR table, it links the pdb to the full table, and it also links the full table and index back to the sub tables.
 def initIPR(full_table_file, template_with_script):
+   from bs4 import BeautifulSoup
+   
    table_id = full_table_file.replace('.html', '').replace('./tables/', '')
    print(table_id)
-   from bs4 import BeautifulSoup
+   
    with open(full_table_file,'r') as file:
-       raw_table = BeautifulSoup(file.read(), 'lxml')
-       ### link the full table back to home
        
-       new_link = raw_table.new_tag('a', href = 'ip_distribution.html')
-       new_link.string = "INDEX"
-       raw_table.body.append(new_link)
+       raw_table = BeautifulSoup(file.read(), 'lxml')
+       
+       ## link all the pdb files 
        rows = raw_table.find_all('tr')
        for row in rows:
             cells = row.findChildren('td')
             pdb_link = BeautifulSoup('<a onclick="getStr(' + "'" + cells[4].get_text() + "','" + cells[5].get_text() + "'" + ')" href="javascript:void(0);">' + cells[4].get_text() + '</a>', 'lxml').a
             cells[4].string = ""
-            cells[4].append(pdb_link)          
+            cells[4].append(pdb_link)
+            
+       ## import the script + table into the temp, also add links
+            
        with open(template_with_script, 'r') as file:
           final_full_table = BeautifulSoup(file.read(), 'lxml')
-          final_full_table.body.insert(1, raw_table.find_all('table')[0])
-          final_full_table.body.insert(1, raw_table.find_all('script')[0])
-          final_full_table.body.insert(1, raw_table.find_all('script')[1])                              
+          
+          ### link the full table back to home
+          new_link = final_full_table.new_tag('a', href = 'ip_distribution.html')
+          new_link.string = "INDEX"
+          final_full_table.head.append(new_link)
+           ## link table
+          final_full_table.body.insert(2, raw_table.find_all('table')[0])
+          for script in raw_table.find_all('script'):
+              final_full_table.body.append(script)
       # done editing, now save the soup
        with open(full_table_file,'w+', encoding="utf-8") as file:
            file.write(str(final_full_table))
 
-   ### now also open the sub tables
-
-       column_number = 4
+       ### now also open the sub tables
+       column_number = 1
        while (column_number < 8):
             with open('./tables/' + 'col_' + str(column_number) + '_' + table_id + '.html','r', encoding="utf-8") as file:
+                ##link the original table to the subtables
                 soup = BeautifulSoup(file.read(), 'lxml')
+                soup.body.insert(0, BeautifulSoup('<a href="../ICMEssential/ip_distribution.html"' + '>INDEX</a>').a)
                 full_table_link = BeautifulSoup('<a href="./tables/' + table_id + '.html"' + '>' + dictionary(table_id, './ICMEssential/ip_distribution.csv') + "</a>", 'lxml').a
-                soup.html.insert(0,full_table_link)
-                soup.html.append(BeautifulSoup('<a href="../ICMEssential/ip_distribution.html"' + '>INDEX</a>').a)
-                if (column_number == 6) :
-                    ### load the scripts for pdb and insert into soup
-                    with open(template_with_script, 'r') as file:
-                          scripts = BeautifulSoup(file.read(), 'lxml').find_all('script')
-                          for script in scripts:
-                              soup.body.insert(1, script)
-                    ## then load the pdb links in each row
+                soup.body.insert(0,full_table_link)
+                
+            ## Insert script and style for pdb pages
+            if (column_number == 6):
+                ### load the scripts for pdb and insert into soup
+                with open(template_with_script, 'r') as style_src:
+                    full_file = BeautifulSoup(style_src.read(), 'lxml')
+                    
+                    ## append moledit, sortable scripts to bottom of body
+                    for script in soup.find_all('script'):
+                         full_file.body.append(script)
+                         
+                    ## insert the table links into soup
+   
                     rows = soup.find_all('tr')
                     for row in rows:
                         cells = row.findChildren('td')
-                        pdb_link = BeautifulSoup('<a onclick="getStr(' + "'" + cells[5].get_text() + "','" + cells[7].get_text() + "'" + ')" href="javascript:void(0);">' + cells[5].get_text() + '</a>', 'lxml').a
-                        cells[5].string = ""
-                        
-                        print(str(pdb_link))
-                        cells[5].append(pdb_link)
-            with open('./tables/' + 'col_' + str(column_number) + '_' + table_id + '.html','w+', encoding="utf-8") as file:
+                        pdb_link = BeautifulSoup('<a onclick="getStr(' + "'" + cells[7].get_text() + "','" + cells[5].get_text() + "'" + ')" href="javascript:void(0);">' + cells[7].get_text() + '</a>', 'lxml').a
+                        cells[7].string = ""
+                        cells[7].append(pdb_link)
+                    full_file.body.insert(2, soup.find_all('table')[0])               
+                with open('./tables/' + 'col_' + str(column_number) + '_' + table_id + '.html','w+', encoding="utf-8") as file:
+                    file.write(str(full_file))
+            else: 
                 file.write(str(soup))
             column_number += 1
             
@@ -144,17 +162,17 @@ def clean_page(web_page):
            file.write(str(soup))
            file.close()
 
-#initIndex('./ICMEssential/ip_distribution.html', './ICMEssential/basicTemplate.html')
-# clean_page('./ICMEssential/ip_distribution.html')
+initIndex('./ICMEssential/ip_distribution.html', './ICMEssential/basicTemplate.html')
+clean_page('./ICMEssential/ip_distribution.html')
 
 for root, dirs, files in os.walk('./tables'):
     for file_name in files:
        clean_page('./tables/' + file_name)
        if '_' not in file_name:
-         print("GPCR")
           ### Full table, initialize links to subtables and back to home.
          initIPR('./tables/' + file_name, './ICMEssential/basicTemplate.html')
 
 #openIndex()
+
                                           
 
