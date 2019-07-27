@@ -107,7 +107,8 @@ def initIPR(full_table_file, template_with_script):
           ## scrape the template
           final_full_table = BeautifulSoup(file.read(), 'lxml')
           
-          ## add the div
+          ## add the div and make it fit
+          final_full_table.head.append(BeautifulSoup('<style type="text/css"> #table-icm {width: 50%;}</style>').style)
           final_full_table.body.insert(2, BeautifulSoup('<div id="con"></div>'))
           
           ## link table
@@ -133,11 +134,13 @@ def initIPR(full_table_file, template_with_script):
                 with open(template_with_script, 'r') as style_src:
                     full_file = BeautifulSoup(style_src.read(), 'lxml')
                      ## also link back to table
-                    full_table_link = BeautifulSoup('<a href="./tables/' + table_id + '.html"' + '>' + dictionary(table_id, './ICMEssential/ip_distribution.csv') + "</a>", 'lxml').a
-                    full_file.body.insert(2, full_table_link)
+                    full_table_link = BeautifulSoup('<a href="./tables/' + table_id + '.html"' + '>' + dictionary(table_id, './ICMEssential/ip_distribution.csv') + "</a>", 'lxml')
+                    full_file.body.insert(2, full_table_link)                    
                 if (column_number == 6):
+                        ## make page fit to width
+                        full_file.body.append(BeautifulSoup('<style type="text/css"> #table-icm {width: 50%;}</style>').style)
                         ## add the pdb
-                        full_file.body.insert(3, BeautifulSoup('<div id="con"></div>').div)                          
+                        full_file.body.insert(4, BeautifulSoup('<div id="con"></div>').div)                          
                         ## insert the table links into soup
                         rows = table_file.find_all('tr')
                         for row in rows:
@@ -145,10 +148,10 @@ def initIPR(full_table_file, template_with_script):
                             pdb_link = BeautifulSoup('<a onclick="getStr(' + "'" + cells[7].get_text() + "','" + cells[5].get_text() + "'" + ')" href="javascript:void(0);">' + cells[7].get_text() + '</a>', 'lxml').a
                             cells[7].string = ""
                             cells[7].append(pdb_link)
-                        full_file.body.insert(4, table_file.find_all('table')[0])
+                        full_file.body.insert(5, table_file.find_all('table')[0])
                 else:
                     ## insert the table at a diff position
-                    full_file.body.insert(3, table_file.find_all('table')[0])
+                    full_file.body.insert(4, table_file.find_all('table')[0])
                 ## append moledit, sortable, and chemview scripts to bottom of body
                 for script in table_file.find_all('script'):
                      full_file.body.append(script)
@@ -178,6 +181,7 @@ for root, dirs, files in os.walk('./tables'):
            clean_page('./tables/' + file_name)
            ### Full table, initialize links to subtables and back to home.
            initIPR('./tables/' + file_name, './ICMEssential/basicTemplate.html')
+           
 
 #openIndex()
 
