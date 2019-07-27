@@ -1,7 +1,7 @@
 # Human-Protein
 Web database organizing atomic structures of human proteins in order to predict the susceptibility of human genes to therapeutic drugs, with built in 3D viewer!
 
-![Sample web page](https://drive.google.com/file/d/1I88QUFmPABR1djRWVVe3Cdk-ObDzlvsh/view?usp=sharing)
+![Sample web page](https://user-images.githubusercontent.com/25091114/61990894-e63c6e80-b016-11e9-8829-4f76152bb2cb.PNG)
 # ICMEssential
 A compiled folder of data on the human genome. PDB codes, protein domains, ligand structures, all the raw data you need is here, and can be viewed using MolSoft ICM. This will be updated constantly. It also contains an IP Distribution web page, which contains master links to all the different data, but in a more viewable web database than what Github has to offer. 
 
