@@ -8,8 +8,8 @@ A compiled folder of data on the human genome. PDB codes, protein domains, ligan
 # ```./tables```
 Subtables of the raw data (created for better organization and visibility) should be generated here. Each IPR code has its own set of subtables which can be viewed when searching the IPR code from the IP Distribution home page.
 
-# Py-Pro
-A program which combines BeautifulSoup and HTML/CSS to link and organize the tables relative to each other. Also manipulates the raw tables by adding an ICMJS extension used to view the 3D pocket of the protein-ligand binding interaction.
+# Main
+Python program which combines BeautifulSoup and HTML/CSS to link and organize the tables relative to each other. Also manipulates the raw tables by adding an ICMJS extension used to view the 3D pocket of the protein-ligand binding interaction.
 
 # ICM Script
 Script written in the ICM language. Generates the raw subtables given ICMEssential raw data, (```/tables``` must be specified as the working directory before starting the script) and also generated the 3D pocket for each entry.
