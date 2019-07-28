@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title> Human Protein Database</title>
+		<title> Druggability of Human Genome </title>
 		<!--pocket viewer script, must put before style since it gets overwritten-->
 		<script src="http://molsoft.com/lib/acticm.js"></script>
 		<style type="text/css">
 			#table-icm {
-
 			    border-collapse:collapse;
 			    font-family: arial;
 			    font-size:14px;
-				float: left;
+			    float: left;
 			    table-layout: fixed;
 			    display: inline;  
 			}
@@ -20,9 +19,9 @@
 			    border:1px solid gray;
 			    padding: 5px;
 			    position: sticky;
-				position: -webkit-sticky;
-				top: 0;
-				z-index: 999;
+			    position: -webkit-sticky;
+			    top: 0;
+			    z-index: 999;
 			}
 			#table-icm td {
 				border:1px solid gray;
@@ -33,31 +32,36 @@
 			#table-icm tr:nth-child(odd) {background: #FFF}
 			body {
 				text-align: center;
-				max-width: 100%;
 				font-family: arial;
-			    font-size: 14px;
+			        font-size: 14px;
 			}
-			#con{
+			#con{	
+				border:1px solid black;
 				position: fixed !important;
-				width: 45% !important;
-				height: 500px;
-				left: 53% !important;
-				top: 12% !important;
-				float: right;
+				width: 35% !important;
+				height: 35% !important;
+				left: 1% !important;
+				top: 1% !important;
+				display: block;
+				float: left;
 			}
 		</style>
 	</head>
-	<body>
-		<h1>Human Protein Database</h1>
-		<a href="../ICMEssential/ip_distribution.html">Home</a>
- 
+	<body>   
+		<h1 align = "right">Human Protein Database</h1> </br>
+		<a href="../ICMEssential/ip_distribution.html" style = "float: right;">Home</a>
+		<p style = "text-align: right;"> Basic info goes here. </p>
+		</br>
+
+		<!--div gets added here-->
+
 		<!--tables are index 2, place them here--->
 		
+
 		<!--scripts are index 3, place them here-->
 		<script>
-			function onLoadActiveIcm() {act = new ActiveIcmJS("con"); act.projectFile = "../pdb/3ny9_jsz.pdb"}
-			function getStr(pdbid,ligName) { act.projectFile = "../pdb/" + pdbid + "_" + ligName + ".pdb"; // or pdb, mol
-				act.OpenProject("../pdb/" + pdbid + "_" + ligName + ".pdb")
+			function onLoadActiveIcm() {act = new ActiveIcmJS("con"); act.projectFile = "../pdb/3ny9_jsz.icb"}
+			function getStr(pdbid,ligName) { act.projectFile = "../pdb/" + pdbid + "_" + ligName + ".icb"; // or pdb, mol
 				return false; }
 		</script>
 		<!--next 2 scripts + ligand script-->
