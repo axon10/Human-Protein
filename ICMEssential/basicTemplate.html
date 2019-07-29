@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title> Druggability of Human Genome </title>
+		<title> Drugged Human Proteome </title>
 		<!--pocket viewer script, must put before style since it gets overwritten-->
 		<script src="http://molsoft.com/lib/acticm.js"></script>
 		<style type="text/css">
@@ -32,6 +32,7 @@
 			#table-icm tr:nth-child(odd) {background: #FFF}
 			body {
 				text-align: center;
+				max-width: 1400px;
 				font-family: arial;
 			        font-size: 14px;
 			}
@@ -48,9 +49,9 @@
 		</style>
 	</head>
 	<body>   
-		<h1 align = "right">Human Protein Database</h1> </br>
-		<a href="../ICMEssential/ip_distribution.html" style = "float: right;">Home</a>
-		<p style = "text-align: right;"> Basic info goes here. </p>
+		<h1 align = "right">Drugged Human Proteome</h1> </br>
+		<a href="../ICMEssential/ip_distribution.html" style = "float: right; font-size: 20px; ">Home</a>
+		<p style = "text-align: right;"></p>
 		</br>
 
 		<!--div gets added here-->
@@ -60,7 +61,7 @@
 
 		<!--scripts are index 3, place them here-->
 		<script>
-			function onLoadActiveIcm() {act = new ActiveIcmJS("con"); act.projectFile = "../pdb/3ny9_jsz.icb"}
+			function onLoadActiveIcm() {act = new ActiveIcmJS("con"); }
 			function getStr(pdbid,ligName) { act.projectFile = "../pdb/" + pdbid + "_" + ligName + ".icb"; // or pdb, mol
 				return false; }
 		</script>
