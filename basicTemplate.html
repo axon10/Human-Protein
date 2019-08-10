@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>The Ligandable Human Proteome </title>
+		<!--pocket viewer script, must put before style since it gets overwritten-->
+		<script src="http://molsoft.com/lib/acticm.js"></script>
+		<style type="text/css">
+			#table-icm {
+			    border-collapse:collapse;
+			    font-family: arial;
+			    font-size:14px;
+			    float: left;
+			    table-layout: fixed;
+			    display: inline;  
+			}
+			#table-icm th {
+			    background-color: #AAA;
+			    color: white;
+			    border:1px solid gray;
+			    padding: 5px;
+			    position: sticky;
+			    position: -webkit-sticky;
+			    top: 0;
+			    z-index: 999;
+			}
+			#table-icm td {
+				border:1px solid gray;
+				padding: 5px;
+				word-wrap:break-word
+			}
+			#table-icm tr:nth-child(even) {background: #EEE}
+			#table-icm tr:nth-child(odd) {background: #FFF}
+			body {
+				text-align: center;
+				font-family: arial;
+			        font-size: 14px;
+			}
+			#con{	
+				border:1px solid black;
+				position: fixed !important;
+				width: 35% !important;
+				height: 35% !important;
+				right: 1% !important;
+				top: 1% !important;
+				display: block;
+				float: right; 
+			}
+		</style>
+	</head>
+	<body>   
+		<h1 align = "left">The Ligandable Human Proteome</h1> </br>
+		<a href="../index.html"; style = "float: left; font-size: 20px; ">Home</a>
+		<p style = "text-align: left;"></p>
+		</br>
+
+		<!--div gets added here-->
+
+		<!--tables are index 2, place them here--->
+		
+
+		<!--scripts are index 3, place them here-->
+		<script>
+			function onLoadActiveIcm() {act = new ActiveIcmJS("con"); }
+			function getStr(pdbid,ligName) { act.projectFile = "../pdb/" + pdbid + "_" + ligName + ".icb"; // or pdb, mol
+				return false; }
+		</script>
+		<!--next 2 scripts + ligand script-->
+	</body>
+</html>

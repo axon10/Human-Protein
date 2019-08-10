@@ -1,0 +1,194 @@
+1,IPR000276,"G protein-coupled receptor, rhodopsin-like",710.,96,0.815,29.,49.,17.,21.,8
+2,IPR000719,Protein kinase domain,482.,88,8.45,942.,1099.,117.,267.,80
+3,IPR001680,WD40 repeat,266.,88,226.3,19.,21.,3.,71.,2
+4,IPR001611,Leucine-rich repeat,261.,67,55000.,6.,6.,1.,39.,1
+5,IPR002048,EF-hand domain,228.,57,2000000.,2.,2.,1.,71.,1
+6,IPR000210,BTB/POZ domain,178.,66,3.,5.,5.,2.,30.,1
+7,IPR001806,Small GTPase,137.,86,340000.,17.,18.,2.,73.,1
+8,IPR001245,"Serine-threonine/tyrosine-protein kinase, catalytic domain",131.,91,3.5,489.,602.,58.,87.,52
+9,IPR001254,"Serine proteases, trypsin domain",121.,83,6.15,203.,215.,14.,53.,12
+10,IPR002126,Cadherin-like,115.,55,no data,1.,1.,1.,13.,0
+11,IPR000980,SH2 domain,109.,88,12000.,1.,1.,1.,46.,1
+12,IPR001650,"Helicase, C-terminal",108.,63,5300.,1.,1.,1.,35.,1
+13,IPR001304,C-type lectin-like,86.,48,no data,2.,3.,2.,38.,0
+14,IPR002035,"von Willebrand factor, type A",76.,57,2400.,2.,2.,2.,16.,1
+15,IPR001394,"Peptidase C19, ubiquitin carboxyl-terminal hydrolase",74.,90,430.,6.,6.,1.,20.,1
+16,IPR001791,Laminin G domain,61.,100,0.182,4.,7.,1.,7.,1
+17,IPR006652,Kelch repeat type 1,61.,80,670.,8.,9.,1.,9.,1
+18,IPR001128,Cytochrome P450,60.,99,no data,33.,45.,15.,24.,0
+19,IPR002347,Short-chain dehydrogenase/reductase SDR,55.,99,no data,6.,6.,1.,22.,0
+20,IPR001214,SET domain,51.,87,3.3,13.,16.,5.,30.,3
+21,IPR003439,ABC transporter-like,49.,73,no data,1.,1.,1.,16.,0
+22,IPR000536,"Nuclear hormone receptor, ligand-binding domain",48.,100,1.85,134.,240.,17.,36.,14
+23,IPR001752,Kinesin motor domain,45.,90,1.6,20.,21.,1.,17.,1
+24,IPR000225,Armadillo,42.,66,900000.,3.,3.,1.,16.,1
+25,IPR001487,Bromodomain,41.,75,57.,211.,254.,22.,33.,15
+26,IPR001590,"Peptidase M12B, ADAM/reprolysin",40.,84,49.,5.,5.,2.,8.,2
+27,IPR000608,Ubiquitin-conjugating enzyme E2,40.,77,1720.,1.,1.,1.,31.,1
+28,IPR001609,"Myosin head, motor domain",39.,89,290.,1.,2.,1.,6.,1
+29,IPR023796,Serpin domain,38.,90,290.,2.,3.,2.,21.,1
+30,IPR000242,PTP type protein phosphatase,38.,89,300.,21.,33.,5.,30.,3
+31,IPR005828,"Major facilitator,  sugar transporter-like",36.,81,no data,1.,1.,1.,2.,0
+32,IPR001828,"Receptor, ligand binding region",36.,96,80.65,5.,6.,4.,15.,2
+33,IPR000566,Lipocalin/cytosolic fatty-acid binding domain,34.,93,93.,16.,20.,5.,23.,3
+34,IPR000863,Sulfotransferase domain,33.,95,83200.,3.,4.,3.,15.,1
+35,IPR004000,Actin family,32.,88,no data,2.,26.,1.,7.,0
+36,IPR002181,"Fibrinogen, alpha/beta/gamma chain, C-terminal globular domain",32.,48,no data,2.,2.,2.,13.,0
+37,IPR003347,JmjC domain,32.,94,52.,35.,45.,8.,24.,5
+38,IPR001627,Sema domain,31.,35,no data,1.,1.,1.,6.,0
+39,IPR000873,AMP-dependent synthetase/ligase,30.,89,no data,1.,1.,1.,1.,0
+40,IPR001895,Ras guanine-nucleotide exchange factors catalytic domain,30.,96,322000.,12.,12.,1.,9.,1
+41,IPR017892,"Protein kinase, C-terminal",30.,72,no data,1.,1.,1.,11.,0
+42,IPR000772,"Ricin B, lectin domain",29.,72,no data,2.,2.,2.,14.,0
+43,IPR000073,Alpha/beta hydrolase fold-1,28.,97,0.66,39.,40.,1.,6.,1
+44,IPR003594,Histidine kinase/HSP90-like ATPase,28.,84,242.5,145.,165.,6.,9.,6
+45,IPR000086,NUDIX hydrolase domain,27.,97,0.4,10.,10.,1.,20.,1
+46,IPR004045,"Glutathione S-transferase, N-terminal",27.,85,300.,19.,25.,7.,20.,5
+47,IPR005135,Endonuclease/exonuclease/phosphatase,25.,81,17.5,1.,1.,1.,13.,1
+48,IPR003008,"Tubulin/FtsZ, GTPase domain",24.,98,no data,1.,1.,1.,7.,0
+49,IPR002130,Cyclophilin-type peptidyl-prolyl cis-trans isomerase domain,24.,83,600.,10.,10.,1.,19.,1
+50,IPR004046,"Glutathione S-transferase, C-terminal",24.,86,165.5,18.,23.,6.,20.,4
+51,IPR000834,"Peptidase M14, carboxypeptidase A",23.,98,8.,1.,1.,1.,8.,1
+52,IPR000421,Coagulation factor 5/8 C-terminal domain,23.,38,7800.,1.,1.,1.,9.,1
+53,IPR001818,"Peptidase M10, metallopeptidase",23.,90,4.7,49.,55.,8.,12.,6
+54,IPR017978,"GPCR family 3, C-terminal",22.,97,no data,1.,1.,1.,1.,0
+55,IPR002893,"Zinc finger, MYND-type",21.,84,no data,1.,1.,1.,6.,0
+56,IPR005123,Oxoglutarate/iron-dependent dioxygenase,21.,90,15.8,8.,21.,1.,7.,1
+57,IPR002073,"3'5'-cyclic nucleotide phosphodiesterase, catalytic domain",21.,89,0.5,133.,160.,11.,12.,11
+58,IPR001054,Adenylyl cyclase class-3/4/guanylyl cyclase,19.,100,360.,2.,3.,1.,3.,1
+59,IPR000403,"Phosphatidylinositol 3-/4-kinase, catalytic domain",19.,80,no data,1.,1.,1.,10.,0
+60,IPR015590,Aldehyde dehydrogenase domain,19.,92,105.,11.,12.,4.,11.,2
+61,IPR001320,Ionotropic glutamate receptor,18.,54,no data,1.,1.,1.,5.,0
+62,IPR019594,"Ionotropic glutamate receptor, L-glutamate and glycine-binding domain",18.,91,620.,7.,8.,4.,5.,3
+63,IPR000001,Kringle,18.,62,370.,4.,4.,2.,8.,1
+64,IPR023210,NADP-dependent oxidoreductase domain,18.,99,no data,77.,152.,7.,11.,0
+65,IPR001148,Alpha carbonic anhydrase domain,18.,87,10.85,107.,149.,8.,13.,6
+66,IPR000917,"Sulfatase, N-terminal",17.,80,no data,1.,1.,1.,6.,0
+67,IPR001179,FKBP-type peptidyl-prolyl cis-trans isomerase domain,17.,69,no data,2.,2.,1.,11.,0
+68,IPR012317,"Poly(ADP-ribose) polymerase, catalytic domain",17.,89,35.55,101.,107.,7.,11.,6
+69,IPR001079,"Galectin, carbohydrate recognition domain",16.,60,910000.,2.,2.,2.,10.,1
+70,IPR002018,"Carboxylesterase, type B",15.,94,3306.,9.,10.,3.,7.,1
+71,IPR013126,Heat shock protein 70 family,15.,89,24000.,7.,11.,2.,8.,2
+72,IPR013149,"Alcohol dehydrogenase, C-terminal",15.,90,no data,8.,8.,4.,14.,0
+73,IPR018502,Annexin repeat,14.,71,no data,1.,1.,1.,8.,0
+74,IPR001607,"Zinc finger, UBP-type",14.,79,no data,4.,4.,1.,9.,0
+75,IPR001759,Pentraxin-related,13.,49,no data,1.,1.,1.,2.,0
+76,IPR000562,Fibronectin type II domain,13.,92,no data,1.,1.,1.,6.,0
+77,IPR000668,"Peptidase C1A, papain C-terminal",13.,85,1.5,35.,35.,4.,9.,3
+78,IPR023753,FAD/NAD(P)-binding domain,12.,51,no data,1.,1.,1.,5.,0
+79,IPR024810,Mab-21 domain,12.,73,200.,3.,3.,1.,5.,1
+80,IPR007484,Peptidase M28,12.,88,44.,2.,2.,1.,6.,1
+81,IPR013078,"Histidine phosphatase superfamily, clade-1",12.,96,21.,3.,3.,1.,8.,1
+82,IPR000555,JAB1/MPN/MOV34 metalloenzyme domain,12.,63,1100.,1.,1.,1.,15.,1
+83,IPR016090,Phospholipase A2 domain,11.,87,12.,8.,9.,3.,4.,1
+84,IPR023801,Histone deacetylase domain,11.,93,90.,13.,15.,3.,6.,3
+85,IPR006680,Amidohydrolase-related,11.,90,no data,1.,1.,1.,9.,0
+86,IPR019791,"Haem peroxidase, animal type",10.,99,no data,11.,14.,2.,2.,0
+87,IPR002591,Type I phosphodiesterase/nucleotide pyrophosphatase/phosphate transferase,10.,93,13.,9.,10.,1.,5.,1
+88,IPR002937,Amine oxidase,10.,91,310.,7.,7.,2.,6.,1
+89,IPR033121,Peptidase family A1 domain,10.,92,0.6,183.,189.,3.,7.,3
+90,IPR003349,JmjN domain,10.,44,no data,1.,1.,1.,8.,0
+91,IPR004092,Mbt repeat,10.,59,5000.,3.,3.,2.,8.,1
+92,IPR026298,Blc2 family,10.,90,3300.,2.,2.,1.,9.,1
+93,IPR006076,FAD dependent oxidoreductase,9.,99,no data,3.,3.,1.,2.,0
+94,IPR000472,Activin types I and II receptor domain,9.,19,no data,1.,1.,1.,5.,0
+95,IPR000994,Peptidase M24,9.,86,296.,21.,21.,2.,7.,2
+96,IPR001375,"Peptidase S9, prolyl oligopeptidase, catalytic domain",9.,69,1.,2.,2.,1.,7.,1
+97,IPR022742,"Serine aminopeptidase, S33",8.,95,29.,3.,3.,1.,1.,1
+98,IPR008753,"Peptidase M13, N-terminal domain",8.,91,0.6,3.,3.,1.,2.,1
+99,IPR004274,FCP1 homology domain,8.,60,5000.,1.,1.,1.,3.,1
+100,IPR001236,"Lactate/malate dehydrogenase, N-terminal",8.,74,137000.,2.,2.,1.,4.,1
+101,IPR002314,"Aminoacyl-tRNA synthetase, class II (G/ P/ S/T)",8.,98,0.76,3.,4.,1.,4.,1
+102,IPR001370,BIR repeat,8.,74,45.,14.,14.,2.,6.,2
+103,IPR007863,"Peptidase M16, C-terminal",7.,79,60.,4.,4.,1.,4.,1
+104,IPR001223,"Glycoside hydrolase family 18, catalytic domain",7.,94,420.,7.,7.,2.,5.,1
+105,IPR003000,Sirtuin family,7.,99,1740.,8.,13.,4.,5.,3
+106,IPR027450,Alpha-ketoglutarate-dependent dioxygenase AlkB-like,7.,86,no data,1.,1.,1.,5.,0
+107,IPR023410,14-3-3 domain,7.,67,no data,2.,2.,1.,7.,0
+108,IPR001365,Adenosine/AMP deaminase domain,6.,97,no data,1.,1.,1.,2.,0
+109,IPR001129,"Membrane-associated, eicosanoid/glutathione metabolism (MAPEG) protein",6.,52,0.9,6.,6.,1.,3.,1
+110,IPR001506,Peptidase M12A,6.,83,no data,3.,3.,1.,3.,0
+111,IPR002469,"Dipeptidylpeptidase IV, N-terminal domain",6.,74,0.82,6.,6.,1.,6.,1
+112,IPR008380,"HAD-superfamily hydrolase, subfamily IG, 5'-nucleotidase",5.,71,790000.,2.,2.,1.,1.,1
+113,IPR003121,SWIB/MDM2 domain,5.,92,12.,4.,4.,1.,2.,1
+114,IPR031778,"Sortilin, N-terminal",5.,74,330.,1.,1.,1.,2.,1
+115,IPR004198,"Zinc finger, C5HC2-type",5.,77,no data,1.,1.,1.,3.,0
+116,IPR006085,XPG N-terminal,5.,67,182.,1.,1.,1.,3.,1
+117,IPR007275,YTH domain,5.,85,1200.,1.,1.,1.,3.,1
+118,IPR004364,"Aminoacyl-tRNA synthetase, class II (D/K/N)",5.,94,2100.,1.,2.,1.,4.,1
+119,IPR006204,GHMP kinase N-terminal domain,5.,97,no data,1.,1.,1.,4.,0
+120,IPR013530,"Protein-arginine deiminase, C-terminal",5.,73,no data,4.,4.,1.,4.,0
+121,IPR018955,"Branched-chain alpha-ketoacid dehydrogenase kinase/Pyruvate dehydrogenase kinase, N-terminal",5.,71,87.,2.,7.,2.,4.,1
+122,IPR022673,"Hexokinase, C-terminal",5.,95,no data,21.,24.,1.,4.,0
+123,IPR024084,Isopropylmalate dehydrogenase-like domain,5.,76,no data,5.,5.,1.,4.,0
+124,IPR031330,"Glycoside hydrolase 35, catalytic domain",4.,85,no data,1.,1.,1.,1.,0
+125,IPR000092,Polyprenyl synthetase,4.,97,1200.,2.,3.,1.,2.,1
+126,IPR001040,Translation Initiation factor eIF- 4e,4.,57,no data,2.,2.,1.,2.,0
+127,IPR004567,Type II pantothenate kinase,4.,38,no data,1.,1.,1.,2.,0
+128,IPR034733,Acetyl-CoA carboxylase,4.,62,37000.,1.,1.,1.,2.,1
+129,IPR013079,6-phosphofructo-2-kinase,4.,96,11.,4.,4.,1.,3.,1
+130,IPR014760,"Serum albumin, N-terminal",4.,96,2900.,12.,14.,1.,3.,1
+131,IPR031314,Deoxynucleoside kinase domain,4.,100,0.5,28.,34.,1.,3.,1
+132,IPR000845,Nucleoside phosphorylase domain,4.,97,0.0052,13.,20.,3.,4.,1
+133,IPR001093,IMP dehydrogenase/GMP reductase,4.,81,6.,1.,1.,1.,4.,1
+134,IPR019774,"Aromatic amino acid hydroxylase, C-terminal",4.,77,30.,1.,1.,1.,4.,1
+135,IPR001563,"Peptidase S10, serine carboxypeptidase",3.,71,no data,1.,1.,1.,1.,0
+136,IPR022768,Fascin domain,3.,84,no data,1.,1.,1.,1.,0
+137,IPR006035,Ureohydrolase,3.,72,63.5,1.,2.,2.,2.,2
+138,IPR008015,"GMP phosphodiesterase, delta subunit",3.,100,184.,3.,3.,1.,2.,1
+139,IPR010513,KEN domain,3.,62,5400.,1.,1.,1.,2.,1
+140,IPR011084,DNA repair metallo-beta-lactamase,3.,61,no data,3.,3.,1.,2.,0
+141,IPR015883,"Glycoside hydrolase family 20, catalytic domain",3.,83,no data,1.,1.,1.,2.,0
+142,IPR000811,"Glycosyl transferase, family 35",3.,97,8920.,33.,49.,2.,3.,2
+143,IPR000940,"Methyltransferase, NNMT/PNMT/TEMT",3.,100,1.3,3.,6.,1.,3.,1
+144,IPR001310,Histidine triad (HIT) protein,3.,84,55900.,1.,4.,2.,3.,1
+145,IPR001424,"Superoxide dismutase, copper/zinc binding domain",3.,66,no data,3.,3.,1.,3.,0
+146,IPR001548,"Peptidase M2, peptidyl-dipeptidase A",3.,75,65.885,3.,4.,3.,3.,2
+147,IPR003140,Phospholipase/carboxylesterase/thioesterase,3.,96,280.,1.,1.,1.,3.,1
+148,IPR004030,"Nitric oxide synthase, N-terminal",3.,92,no data,81.,136.,3.,3.,0
+149,IPR011611,Carbohydrate kinase PfkB,3.,93,4.45,8.,8.,2.,3.,2
+150,IPR011615,"p53, DNA-binding domain",3.,86,470.,15.,15.,1.,3.,1
+151,IPR015878,"S-adenosyl-L-homocysteine hydrolase, NAD binding domain",3.,100,no data,9.,13.,1.,3.,0
+152,IPR000262,FMN-dependent dehydrogenase,2.,100,no data,3.,3.,1.,1.,0
+153,IPR000692,Fibrillarin,2.,79,no data,1.,1.,1.,1.,0
+154,IPR000898,"Indoleamine 2,3-dioxygenase",2.,93,no data,4.,4.,1.,1.,0
+155,IPR001576,Phosphoglycerate kinase,2.,71,2780.,2.,3.,1.,1.,1
+156,IPR001796,Dihydrofolate reductase domain,2.,99,1.1,27.,39.,1.,1.,1
+157,IPR003101,"Coactivator CBP, KIX domain",2.,70,1900.,1.,1.,1.,1.,1
+158,IPR005065,Platelet-activating factor acetylhydrolase-like,2.,83,120.,3.,3.,1.,1.,1
+159,IPR005720,Dihydroorotate dehydrogenase domain,2.,100,no data,20.,20.,1.,1.,0
+160,IPR024053,"von Hippel-Lindau disease tumour suppressor,  beta domain",2.,72,170.,23.,23.,1.,1.,1
+161,IPR032632,"Peptidase M16, middle/third domain",2.,79,60.,2.,2.,1.,1.,1
+162,IPR035077,"Phosphoenolpyruvate carboxykinase, C-terminal P-loop domain",2.,67,2110.,2.,2.,1.,1.,1
+163,IPR000297,"Peptidyl-prolyl cis-trans isomerase, PpiC-type",2.,83,80.,6.,6.,1.,2.,1
+164,IPR002241,"Glycoside hydrolase, family 27",2.,96,43.,2.,3.,2.,2.,1
+165,IPR003193,ADP-ribosyl cyclase (CD38/157),2.,87,76.,2.,2.,1.,2.,1
+166,IPR003680,Flavodoxin-like fold,2.,51,no data,2.,2.,2.,2.,0
+167,IPR005122,Uracil-DNA glycosylase-like,2.,83,1300.,3.,3.,1.,2.,1
+168,IPR010708,5'(3')-deoxyribonucleotidase,2.,91,no data,1.,1.,1.,2.,0
+169,IPR016053,Haem oxygenase-like,2.,98,no data,1.,1.,1.,2.,0
+170,IPR021991,"UHRF1, tandem tudor domain",2.,46,no data,1.,1.,1.,2.,0
+171,IPR022629,"S-adenosylmethionine synthetase, central domain",2.,88,no data,1.,1.,1.,2.,0
+172,IPR022677,"Myristoyl-CoA:protein N-myristoyltransferase, C-terminal",2.,94,no data,4.,5.,1.,2.,0
+173,IPR033391,"Fructose-1-6-bisphosphatase class I, N-terminal",2.,87,830.,2.,2.,1.,2.,1
+174,IPR000600,ROK family,1.,100,2500.,1.,3.,1.,1.,1
+175,IPR001015,Ferrochelatase,1.,88,no data,1.,20.,1.,1.,0
+176,IPR002818,DJ-1/PfpI,1.,74,no data,2.,2.,1.,1.,0
+177,IPR006099,"Methylmalonyl-CoA mutase, alpha/beta chain, catalytic",1.,98,no data,1.,2.,1.,1.,0
+178,IPR006716,ERG2/sigma1 receptor-like,1.,96,4.3,1.,1.,1.,1.,1
+179,IPR007199,"Replication factor-A protein 1, N-terminal",1.,80,810.,2.,2.,1.,1.,1
+180,IPR007724,Poly(ADP-ribose) glycohydrolase,1.,73,no data,1.,1.,1.,1.,0
+181,IPR007747,Menin,1.,94,22.,12.,12.,1.,1.,1
+182,IPR008334,"5'-Nucleotidase, C-terminal",1.,68,no data,1.,2.,1.,1.,0
+183,IPR011496,Beta-N-acetylglucosaminidase,1.,96,0.9,1.,2.,1.,1.,1
+184,IPR013968,"Polyketide synthase, ketoreductase domain",1.,89,no data,2.,2.,1.,1.,0
+185,IPR015865,"Riboflavin kinase domain, bacterial/eukaryotic",1.,76,no data,1.,1.,1.,1.,0
+186,IPR023416,Transthyretin/hydroxyisourate hydrolase domain,1.,58,6.2,39.,46.,1.,1.,1
+187,IPR023451,Thymidylate synthase/dCMP hydroxymethylase domain,1.,93,no data,1.,1.,1.,1.,0
+188,IPR023485,Phosphotyrosine protein phosphatase I,1.,83,7100.,1.,1.,1.,1.,1
+189,IPR024367,"Alpha-ketoglutarate-dependent dioxygenase FTO, catalytic domain",1.,96,2110.,8.,8.,1.,1.,1
+190,IPR025789,Histone-lysine N-methyltransferase DOT1 domain,1.,92,4400.,5.,5.,1.,1.,1
+191,IPR032259,"Enoyl-CoA hydratase/isomerase,  HIBYL-CoA-H type",1.,79,no data,1.,1.,1.,1.,0
+192,IPR033453,"Glycosyl hydrolase family 30, TIM-barrel domain",1.,87,300.,2.,2.,1.,1.,1
+193,IPR035075,PRMT5 arginine-N-methyltransferase,1.,98,1.,8.,9.,1.,1.,1
+194,IPR000779,Interleukin-2,1.,93,no data,2.,2.,1.,2.,0
